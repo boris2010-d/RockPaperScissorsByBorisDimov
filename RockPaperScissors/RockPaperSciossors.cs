@@ -9,13 +9,13 @@ if(playerMove == "r" || playerMove == "Rock")
 {
     playerMove = Rock; 
 }
-if (playerMove == "p" || playerMove == "Paper")
+else if (playerMove == "p" || playerMove == "Paper")
 {
-    playerMove = Rock;
+    playerMove = Paper;
 }
-if (playerMove == "s" || playerMove == "Scissors")
+else if (playerMove == "s" || playerMove == "Scissors")
 {
-    playerMove = Rock;
+    playerMove = Scissors;
 }
 else
 {
@@ -40,15 +40,15 @@ switch (computerRandomNumber)
 Console.WriteLine($"The computer chose {computerMove}.");
 
 if ((playerMove == Rock && computerMove == Scissors) ||
-(playerMove == Paper && computerMove == Rock) ||
-(playerMove == Scissors && computerMove == Paper))
+    (playerMove == Paper && computerMove == Rock) ||
+    (playerMove == Scissors && computerMove == Paper))
     {
     Console.WriteLine("You win.");
 }
 
 else if ((playerMove == Rock && computerMove == Paper) ||
-(playerMove == Paper && computerMove == Scissors) ||
-(playerMove == Scissors && computerMove == Rock))
+    (playerMove == Paper && computerMove == Scissors) ||
+    (playerMove == Scissors && computerMove == Rock))
 {
     Console.WriteLine("You lose.");
 }
